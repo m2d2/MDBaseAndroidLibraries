@@ -3,6 +3,8 @@ MDBaseAndroidLibraries
 
 _Doco is still being written..._
 
+Download Library from here: https://docs.google.com/file/d/0B9QV0xhni9hEUnFvQUhhSFIzeE0/edit
+
 Android library that provides Engines to easily communicate with external APIs and Commands to carry out application operations.
 
 There are 2 parts to this library:
