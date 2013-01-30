@@ -33,9 +33,9 @@ public abstract class MyAppNameEngine extends Engine {
 
     @Override
     final protected void setAuthValues() {
-        Session session = ModelAccessor.getSessionDetails();
+        Session session = ModelAccessor.getSessionDetails(); // where ever you saved your session tokens
         if (session != null) {
-            getClient().addHeader("x-auth-token", session.token);
+            getClient().addHeader("x-authentication-token", session.token); // set headers and client options here
         }
     }
 
@@ -46,7 +46,7 @@ public abstract class MyAppNameEngine extends Engine {
         beginAuthenticating();
 
         Session session = ModelAccessor.getSessionDetails();
-        Log.d(MomentoJarApplication.appTag(this), "Authentication required");
+        Log.d("Engine.authenticate()", "Authentication required");
 
         if (force || session == null || (session.expires_at != null && session.expires_at.before(new Date()))) {
             PostSessionCommand command = new PostSessionCommand(new CommandCompletionHandler() {
