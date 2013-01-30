@@ -14,7 +14,6 @@ Engines are a simple way to communicate with an external API for your Android ap
 ### How to use Engines
 
 1. Create an Abstract Engine for your app. 
-
 Extend the 4 methods for your engine. You'll want to have a seperate abstract engine for each separate base domain you access i.e. different engines for facebook.com and yourapp.com/api.
 
 2. Extend your app's engine to use for API calls.
@@ -31,7 +30,6 @@ Commands is not a new concept. This is similar to commands in other Java librari
 ### How to use Commands
 
 1. Extend the Command class
-
 Override the execute() method. Call finish() when you're done and return a CommandResult.
 
 2. Calling a Command
